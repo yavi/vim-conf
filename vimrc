@@ -12,8 +12,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 " Tab Handling
 set tabstop=4
@@ -60,4 +62,8 @@ colorscheme onedark
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_theme='onedark'
 
